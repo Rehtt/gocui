@@ -497,6 +497,10 @@ func (v *View) Word(x, y int) (string, error) {
 	return string(str[nl:nr]), nil
 }
 
+func (v *View) LineLen() int {
+	return len(v.lines)
+}
+
 // indexFunc allows to split lines by words taking into account spaces
 // and 0.
 func indexFunc(r rune) bool {
